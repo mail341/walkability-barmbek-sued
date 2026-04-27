@@ -40,6 +40,7 @@ Walkability is modeled using three dimensions:
 - Mobility services (MOIA, switch points)  
 - Delivery services (REWE)  
 - Additional infrastructure data (e.g. schools, healthcare)  
+- Hamburg Masterportal-API
 
 ## Methodology
 
