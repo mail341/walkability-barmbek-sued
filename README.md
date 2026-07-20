@@ -4,16 +4,16 @@
 
 ## Project Overview
 
-This capstone project aims to develop a custom walkability score for the district of Barmbek-Süd in Hamburg, Germany. The analysis combines geospatial, demographic, socio-economic, infrastructure, and mobility data to evaluate how walkable the neighborhood is and how it has evolved over time.
-
-Additionally, the project explores the impact of modern urban services such as ride-pooling (MOIA) and grocery delivery (REWE) on perceived walkability.
+This capstone project develops a transparent and reproducible walkability assessment framework for the district of Barmbek-Süd (Hamburg, Germany). The framework combines geospatial, demographic, socio-economic, infrastructure, environmental, and mobility data to evaluate pedestrian-friendly urban environments while documenting all scoring decisions in a reproducible lookup model.
 
 ## Objectives
 
 - Build a data-driven walkability score  
 - Analyze changes from 2013 to 2024  
 - Investigate relationships between infrastructure and mobility behavior  
-- Evaluate the role of new urban services in walkability  
+- Evaluate the role of new urban services in walkability
+- Develop a transparent material-based surface evaluation model
+- Build a reproducible ETL pipeline for spatial walkability analysis
 
 ## Concept of Walkability
 
@@ -32,6 +32,11 @@ Walkability is modeled using three dimensions:
 - Green spaces and parks  
 - Quiet areas  
 
+### Surface Quality
+- Walking comfort
+- Accessibility
+- Ecological surface quality
+
 ## Data Sources
 
 - Hamburg district statistics (2013–2024)  
@@ -41,15 +46,19 @@ Walkability is modeled using three dimensions:
 - Delivery services (REWE)  
 - Additional infrastructure data (e.g. schools, healthcare)  
 - Hamburg Masterportal-API
+- Hamburg land value data (BORIS Hamburg)
 
 ## Methodology
 
-1. Data collection and cleaning  
-2. Spatial filtering to Barmbek-Süd using GeoPandas  
-3. Feature engineering (e.g. population density, infrastructure access)  
-4. Normalization of indicators  
-5. Weighted scoring model  
-6. Time series analysis  
+1. Data collection and cleaning
+2. ETL pipeline (RAW → STAGING → PREP → MART)
+3. Spatial filtering and feature engineering
+4. Material-based surface evaluation
+5. Indicator normalization
+6. Weighted walkability model
+7. Time series analysis
+
+Material-specific surface types are evaluated using a transparent lookup table containing scores, documented justifications, and source references for walking comfort, accessibility, and ecological quality.
 
 ## Project Structure
 
@@ -85,7 +94,7 @@ raw → staging → prep → mart
 
 ## Expected Outcome
 
-A transparent and reproducible walkability index, including insights into how infrastructure, accessibility, and modern urban services influence urban walkability.
+A transparent and reproducible walkability assessment framework, including a documented material evaluation model, spatial indicators, and reproducible ETL pipeline.
 
 ## Author
 
